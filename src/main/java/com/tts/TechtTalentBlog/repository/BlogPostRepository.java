@@ -1,4 +1,3 @@
-
 package com.tts.TechtTalentBlog.repository;
 
 import com.tts.TechtTalentBlog.model.BlogPost;

@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -21,7 +21,12 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.4.5'
 	implementation 'org.thymeleaf:thymeleaf:3.0.12.RELEASE'
+	// https://mvnrepository.com/artifact/org.webjars/bootstrap
+	implementation group: 'org.webjars', name: 'bootstrap', version: '5.0.1'
+	// https://mvnrepository.com/artifact/org.webjars.bower/jquery
+	implementation group: 'org.webjars.bower', name: 'jquery', version: '3.6.0'
 }
 
 test {
