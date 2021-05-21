@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog Site</title>
+    <!--    <style>-->
+    <!--        body {-->
+    <!--        background-color:red !important;-->
+    <!--        }-->
+    <!--    </style>-->
+    <link href="webjars/bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
 
-<h1>Welcome to our Blog Post Site!</h1>
-<h1>Check out our blogs!</h1>
+    <h1>Welcome to our Blog Post Site!</h1>
+    <h3>Check out our blogs!</h3>
 
-<p>Please use the form below to submit a Blog Post:</p>
-<form action="#"
-      th:action="@{/}"
-      th:object="${blogPost}"
-      method="post">
+    <div class="row">
+        <div th:each="blog:${posts}">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p th:text="${blog.title}"/>
+                    </div>
+                    <div class="panel-body">
+                        <p th:text="${blog.author}"/>
+                        <p th:text="${blog.blogEntry}" />
+                    </div>
+                    <div class="panel-footer">
+                        <!-- Link to Update -->
+                        <!-- Link to Show  -->
+                        <!--  Link to Destroy -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <table>
-        <tr>
-            <td>Title:</td>
-            <td><input type="text" th:field="*{title}"></td>
-        </tr>
-        <tr>
-            <td>Author:</td>
-            <td><input type="text" th:field="*{author}"></td>
-        </tr>
-        <tr>
-            <td>Blog Entry:</td>
-            <td><input type="text" th:field="*{blogEntry}"></td>
-        </tr>
-        <tr>
-            <td><button type="submit">Submit Your Post</button></td>
-        </tr>
-    </table>
-</form>
+<a th:href="@{/blogposts/new}">
+    <button class="btn btn-primary">Submit a New Blog Post</button>
+</a>
 
+<script src="webjars/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
