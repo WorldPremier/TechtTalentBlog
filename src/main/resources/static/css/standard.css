@@ -1,11 +1,18 @@
 body {
-    background-color: #0B5C5F;
+
+    background: lightblue url("https://tse2.mm.bing.net/th?id=OIP.N8jS-gtOtMfrY2daIHuJVAHaCK&pid=Api&P=0&w=581&h=171") no-repeat fixed center;
+      border: 5px dotted red;
+      padding: 35px;
+      background: lightly;
+
+     /* background-image: url("https://tse2.mm.bing.net/th?id=OIP.N8jS-gtOtMfrY2daIHuJVAHaCK&pid=Api&P=0&w=581&h=171") no-repeat fixed center;*/
+    /*   background-color: #coccyx;*/
 }
 
 .container {
-    background-color: rgba(255,255,255,0.8);
-    margin-top:20px;
-    padding-top:10px;
-    padding-bottom:10px;
-    border-radius:5px;
+    background-color: transparent;
+    margin-top:160px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:1px;
 }
